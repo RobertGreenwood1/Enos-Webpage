@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 210 95% 35%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 210 40% 95%;
+    --secondary-foreground: 210 95% 35%;
+    --muted: 210 40% 95%;
+    --muted-foreground: 215 16% 46.9%;
+    --accent: 210 40% 95%;
+    --accent-foreground: 210 95% 35%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 210 95% 35%;
+    --radius: 0.5rem;
+    --chart-1: 210 95% 35%;
+    --chart-2: 205 87% 52%;
+    --chart-3: 220 60% 40%;
+    --chart-4: 200 80% 60%;
+    --chart-5: 190 70% 45%;
+
+    /* Custom blue theme variables */
+    --blue-50: 210 40% 98%;
+    --blue-100: 210 40% 95%;
+    --blue-200: 210 40% 90%;
+    --blue-300: 210 40% 80%;
+    --blue-400: 210 70% 65%;
+    --blue-500: 210 95% 35%;
+    --blue-600: 210 95% 30%;
+    --blue-700: 210 95% 25%;
+    --blue-800: 210 95% 20%;
+    --blue-900: 210 95% 15%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+/* Custom styles for smooth animations */
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-blue-600 to-blue-500 bg-clip-text text-transparent;
+  }
+
+  .gradient-bg-blue {
+    @apply bg-gradient-to-r from-blue-600 to-blue-500;
+  }
+
+  .text-blue-primary {
+    @apply text-blue-600;
+  }
+
+  .bg-blue-primary {
+    @apply bg-blue-600;
+  }
+
+  .hover-bg-blue-primary {
+    @apply hover:bg-blue-700;
+  }
+}
+
+/* Scroll animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mobile scroll optimization */
+@media (max-width: 1024px) {
+  /* Disable scroll behavior on mobile/tablet for better performance */
+  html {
+    scroll-behavior: auto;
+  }
+
+  /* Improve touch scrolling */
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+}
