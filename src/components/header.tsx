@@ -25,12 +25,16 @@ export function Header() {
 
           {/* Actions */}
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" size="default" className="border border-black px-6 py-2 font-sans font-normal">
-              Sign in
-            </Button>
-            <Button size="default" className="bg-blue-600 hover:bg-blue-700 px-6 py-2 font-sans font-normal">
-              Sign up
-            </Button>
+            <Link href="https://gensource.vercel.app/auth/sign-in">
+              <Button variant="ghost" size="default" className="border border-black px-6 py-2 font-sans font-normal">
+                Sign in
+              </Button>
+            </Link>
+            <Link href="https://gensource.vercel.app/auth/sign-up">
+              <Button size="default" className="bg-blue-600 hover:bg-blue-700 px-6 py-2 font-sans font-normal">
+                Sign up
+              </Button>
+            </Link>
           </div>
           </div>
         </div>
