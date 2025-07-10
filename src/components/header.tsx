@@ -25,10 +25,10 @@ export function Header() {
 
           {/* Actions */}
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" size="md" className="border border-black px-6 py-2 font-sans font-normal">
+            <Button variant="ghost" size="default" className="border border-black px-6 py-2 font-sans font-normal">
               Sign in
             </Button>
-            <Button size="md" className="bg-blue-600 hover:bg-blue-700 px-6 py-2 font-sans font-normal">
+            <Button size="default" className="bg-blue-600 hover:bg-blue-700 px-6 py-2 font-sans font-normal">
               Sign up
             </Button>
           </div>
