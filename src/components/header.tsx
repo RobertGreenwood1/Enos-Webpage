@@ -6,30 +6,32 @@ import { Button } from "@/components/ui/button"
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+    <header className="sticky top-0 z-50 w-full pt-4 px-4">
+      <div className="bg-white rounded-full shadow-[0_0_15px_rgba(59,130,246,0.15)] mx-auto max-w-7xl">
+        <div className="px-6 sm:px-8">
+          <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2 relative">
               <Image
-                src="/logo.png"
-                alt="Enos"
-                width={120}
-                height={40}
-                className="h-8 w-auto"
+                src="/header.png"
+                alt="Enos Logo"
+                width={150}
+                height={50}
+                className="h-10 w-auto"
               />
             </Link>
           </div>
 
           {/* Actions */}
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" size="sm">
+            <Button variant="ghost" size="md" className="border border-black px-6 py-2 font-sans font-normal">
               Sign in
             </Button>
-            <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
+            <Button size="md" className="bg-blue-600 hover:bg-blue-700 px-6 py-2 font-sans font-normal">
               Sign up
             </Button>
+          </div>
           </div>
         </div>
       </div>

@@ -11,13 +11,14 @@ export function Footer() {
           <h2 className="text-4xl font-bold mb-8">
             See all you can accomplish in Enos.
           </h2>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100">
-              Get Started
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
-              Talk to Sales
-            </Button>
+          <div className="flex justify-center">
+            <Image
+              src="/icon.svg"
+              alt="Enos Icon"
+              width={80}
+              height={80}
+              className="w-20 h-20 rounded-lg transition-all duration-300 hover:scale-110 hover:shadow-[0_0_30px_rgba(255,255,255,0.6)] cursor-pointer"
+            />
           </div>
         </div>
       </section>
@@ -28,11 +29,11 @@ export function Footer() {
           {/* Logo */}
           <div className="col-span-2 md:col-span-1">
             <Image
-              src="/logo.png"
+              src="/header.png"
               alt="Enos"
-              width={120}
-              height={40}
-              className="h-8 w-auto mb-4"
+              width={150}
+              height={50}
+              className="h-10 w-auto mb-4"
             />
           </div>
 

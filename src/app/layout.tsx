@@ -1,9 +1,18 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Bitter, Inter } from "next/font/google";
 import "./globals.css";
 import ClientBody from "./ClientBody";
 
-const inter = Inter({ subsets: ["latin"] });
+const bitter = Bitter({ 
+  subsets: ["latin"],
+  weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-bitter'
+});
+
+const inter = Inter({ 
+  subsets: ["latin"],
+  variable: '--font-inter'
+});
 
 export const metadata: Metadata = {
   title: "Enos - Where Customer Success Happens",
@@ -16,8 +25,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className} suppressHydrationWarning>
+    <html lang="en" className={`${bitter.variable} ${inter.variable}`}>
+      <body className={`${inter.className} font-sans`} suppressHydrationWarning>
         <ClientBody>{children}</ClientBody>
       </body>
     </html>

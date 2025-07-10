@@ -78,6 +78,16 @@
   body {
     @apply bg-background text-foreground antialiased;
   }
+  
+  /* Apply Bitter font to all headings */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+  
+  /* Apply Bitter font to all bold/semibold/font-bold elements */
+  .font-bold, .font-semibold, .font-medium, strong, b {
+    @apply font-heading;
+  }
 }
 
 /* Custom styles for smooth animations */
