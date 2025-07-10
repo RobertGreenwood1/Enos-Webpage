@@ -4,7 +4,7 @@ import { AnimatedCounter } from './AnimatedCounter';
 
 export function Statistics() {
   return (
-    <section className="py-20 bg-blue-600 text-white">
+    <section className="py-8 bg-blue-600 text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-8">

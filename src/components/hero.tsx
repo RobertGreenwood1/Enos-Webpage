@@ -86,7 +86,7 @@ export function Hero() {
         </div>
 
         {/* Company Logos */}
-        <div className="mt-12 mb-12">
+        <div className="mt-12">
           <p className="text-center text-gray-700 font-semibold mb-4 font-sans">Proudly Partnered with</p>
           <div className="flex justify-center items-center">
             <img 

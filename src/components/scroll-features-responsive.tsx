@@ -227,7 +227,7 @@ export function ScrollFeaturesResponsive() {
                 </div>
 
                 {/* Video/Demo */}
-                <div className="relative h-64 lg:h-80 flex items-center justify-center max-w-3xl mx-auto">
+                <div className="relative h-80 lg:h-96 flex items-center justify-center max-w-4xl mx-auto">
                   <div
                     className="relative"
                     style={{
@@ -238,10 +238,10 @@ export function ScrollFeaturesResponsive() {
                     }}
                   >
                     <video
-                      className="block"
+                      className="block w-full max-w-[300px] sm:max-w-[350px] md:max-w-[400px] lg:max-w-[450px]"
                       style={{
-                        maxWidth: '100%',
-                        maxHeight: '256px'
+                        height: 'auto',
+                        objectFit: 'contain'
                       }}
                       autoPlay
                       muted
@@ -297,7 +297,7 @@ export function ScrollFeaturesResponsive() {
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center overflow-visible">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center overflow-visible">
             {/* Left side - Content */}
             <div className="space-y-8">
               {/* Feature indicator */}
@@ -358,7 +358,7 @@ export function ScrollFeaturesResponsive() {
             {/* Right side - Video/Demo */}
             <div className="relative overflow-visible">
               {/* Video container with smooth transitions */}
-              <div className="relative h-80 lg:h-[400px] flex items-center justify-center overflow-visible">
+              <div className="relative min-h-[300px] h-auto lg:h-[500px] flex items-center justify-center overflow-visible p-4">
                 {/* Abstract shapes background */}
                 <div className="absolute -inset-20 pointer-events-none" style={{ zIndex: -1 }}>
                   <div
@@ -399,10 +399,10 @@ export function ScrollFeaturesResponsive() {
                 >
                   <video
                     key={`video-${activeFeature}`}
-                    className="block"
+                    className="block w-full max-w-[350px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px]"
                     style={{
-                      maxWidth: '100%',
-                      maxHeight: '320px'
+                      height: 'auto',
+                      objectFit: 'contain'
                     }}
                     autoPlay
                     muted
